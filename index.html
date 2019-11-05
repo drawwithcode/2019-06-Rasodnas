@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
@@ -7,7 +8,86 @@
     <script src="p5.min.js"></script>
     <!-- <script src="addons/p5.sound.min.js"></script> -->
     <script src="sketch.js"></script>
+
+
+    <style>
+
+        #instructions {
+          font-family: "Helvetica";
+          font-size: 18px;
+          letter-spacing: -0.5px;
+          line-height: 23px;
+          position: absolute;
+          text-align: left;
+          bottom: 4.5%;
+          left: 2.5%;
+          float:left;
+        }
+
+        #container{
+          position: absolute;
+          bottom: 4%;
+          right: 240px;
+          border: 1px solid #000;
+          width: 60px;
+          height: 70px;
+        }
+
+        #selected {
+          font-family: "Helvetica";
+          font-size: 60px;
+          letter-spacing: -1px;
+          position: relative;
+          text-align:center;
+          left: 0px;
+          top: 3px;
+        }
+
+        #lblSize {
+          font-family: "Helvetica";
+          font-size: 13px;
+          letter-spacing: 0px;
+          position: relative;
+          bottom: 85px;
+          left: 75px;
+        }
+
+        #lblAlpha {
+          font-family: "Helvetica";
+          font-size: 13px;
+          letter-spacing: 0px;
+          position: relative;
+          bottom: 95px;
+          left: 75px;
+        }
+
+
+        #clr {
+          position: absolute;
+          bottom: 0px;
+          left: 75px;
+          border: 1px solid #000;
+          width: 200px;
+          height: 25px;
+          font-size: 13px;
+        }
+
+
+
+    </style>
+
+
   </head>
+
   <body>
+      <div id="instructions"> 1) Select a Char by typing it <br> 2) CLICK on the canvas to position it <br> 3) BACKSPACE + CLICK to delete </div>
+      <div id="container">
+        <div id="selected"> - </div>
+        <p id="lblSize"> size </p>
+        <p id="lblAlpha"> alpha </p>
+        <input type="button" id="clr" value="Delete all selected">
+      </div>
+
+
   </body>
 </html>
